@@ -16,6 +16,7 @@
             <tr>
                 <th>File Name</th>
                 <th>Date Uploaded</th>
+                <th>Download</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                 <tr>
                     <td><a href="/myapp/view?file={{document.docfile.url}}">{{document.docfile.name}}</a></td>
                     <td>{{document.date_time}}</td>
+                    <td><a href="{{document.docfile.url}}">Download</a></td>
                 </tr>
             {% endfor %}
             {% endif %}
