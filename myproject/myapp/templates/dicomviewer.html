@@ -1,0 +1,17 @@
+{% extends header %}
+{% block content %}
+    {% if document %}
+        <div id="dwv">
+            <canvas id="dwv-imageLayer">Only for HTML5 compatible browsers...</canvas>
+        </div>
+        <script>
+            var app = new dwv.App();
+            // initialise with the id of the container div
+            app.init({
+                "containerDivId": "dwv"
+            });
+            // load dicom data
+            app.loadURL(["{{document}}"]);
+        </script>
+    {% endif %}
+{% endblock %}
